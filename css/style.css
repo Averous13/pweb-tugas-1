@@ -1,0 +1,586 @@
+@font-face {
+    font-family: 'bebas';
+    src: url(../fonts/Bebas-Neue-master/BebasNeue-Regular.woff);
+}
+
+body{
+    font: 18px/36px 'bebas', 'Arial-Narrow', arial, sans-serif;
+    background-color: #ddd;
+}
+
+/* .gallery li img{
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+} */
+
+.gallery li{
+    width: 120px;
+    height: 120px;   
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;   
+    margin: 10px 40px 10px -20px;
+    position: relative;
+    list-style-type: none;
+}
+
+
+.gallery li span{
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200,200,200,0.5);
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    color: #24b9b2;
+    opacity: 0;
+    transform: scale(0)
+}
+
+.gallery a:hover span{
+    opacity:1;
+    transition:0.5s;
+    transform: scale(1) rotate(360deg);
+}
+
+
+.clear{
+    clear:both;
+}
+
+h1{
+    font-size: 80px;
+    margin: 50px 0;
+    text-align:center;
+    text-shadow: 3px 3px 1px white;
+}
+
+.container{
+    width:750px;
+    background-color: #fff;
+    margin: auto; 
+    padding: 5px;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+/* luffy */
+.overlay{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(131, 20, 20, 0.7);
+}
+
+.overlay:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(131, 20, 20, 0.7);
+    opacity: 0;
+}
+
+.overlay:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* zoro */
+.overlay1{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay1:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(21, 105, 18, 0.7);
+}
+
+.overlay1:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay1 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay1 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(21, 105, 18, 0.7);
+    opacity: 0;
+}
+
+.overlay1:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* nami */
+.overlay2{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay2:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(228, 97, 10, 0.7);
+}
+
+.overlay2:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay2 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay2 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(228, 97, 10, 0.7);
+    opacity: 0;
+}
+
+.overlay2:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* ussop */
+.overlay3{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay3:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(116, 66, 9, 0.7);
+}
+
+.overlay3:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay3 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay3 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(116, 66, 9, 0.7);
+    opacity: 0;
+}
+
+.overlay3:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+
+/* sanji */
+.overlay4{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay4:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(19, 183, 189, 0.7);
+}
+
+.overlay4:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay4 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay4 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(19, 183, 189, 0.7);
+    opacity: 0;
+}
+
+.overlay4:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* chopper */
+.overlay5{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay5:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(236, 14, 99, 0.7);
+}
+
+.overlay5:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay5 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay5 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(236, 14, 99, 0.7);
+    opacity: 0;
+}
+
+.overlay5:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* robin */
+.overlay6{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay6:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(177, 27, 169, 0.7);
+}
+
+.overlay6:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay6 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay6 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(177, 27, 169, 0.7);
+    opacity: 0;
+}
+
+.overlay6:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* franky */
+.overlay7{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay7:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(26, 160, 126, 0.7);
+}
+
+.overlay7:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay7 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay7 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(26, 160, 126, 0.7);
+    opacity: 0;
+}
+
+.overlay7:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* brook */
+.overlay8{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay8:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(67, 12, 139, 0.7);
+}
+
+.overlay8:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay8 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay8 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(67, 12, 139, 0.7);
+    opacity: 0;
+}
+
+.overlay8:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* jinbe */
+
+.overlay9{
+    width: 0;
+    height: 0;
+    padding: 100px 0;
+    background-color: rgba(199, 25, 25, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: 0.7s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay9:target{
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(23, 6, 117, 0.7);
+}
+
+.overlay9:target img{
+    animation: zoomfade 1s;
+}
+
+.overlay9 img{
+    max-height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.overlay9 .close{
+    width:15px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 27%;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    color:rgba(23, 6, 117, 0.7);
+    opacity: 0;
+}
+
+.overlay9:target .close{
+    animation: fade 0.5s 0.5s forwards;
+}
+
+
+
+
+@keyframes zoomfade{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100%{
+        opacity: 0.8;
+    }
+}
